@@ -12,11 +12,11 @@ from tkinter import ttk
 class DepoYonetimi:
     def __init__(self, root):
         self.depo = {}
-        self.urun_istekleri = []  # Ürün isteklerini saklayacak liste
+        self.urun_istekleri = [] 
         self.root = root
         self.root.title("Depo Yönetim Sistemi")
 
-        # Ekranın ortasında kare pencere
+     
         window_width = 600
         window_height = 600
         screen_width = self.root.winfo_screenwidth()
@@ -93,7 +93,7 @@ class DepoYonetimi:
         pencere.title("Aylık İhtiyaç Listesi")
         pencere.geometry("800x600")
 
-        # Aylık İhtiyaç Listesi kodunu burada çalıştırıyoruz.
+        
         frame = tk.Frame(pencere)
         frame.pack(pady=20)
 
@@ -245,7 +245,6 @@ class DepoYonetimi:
         self.talep_button = ttk.Button(self.pencere, text="Talep Gönder", command=self.urun_iste, style='TButton')
         self.talep_button.grid(row=8, column=0, columnspan=6, pady=20)
 
-        # Talep listesi için listbox ve Excel'e aktar butonu
         self.talep_listbox = tk.Listbox(self.pencere, width=50, height=10, bg='#e6e6fa', fg='black')
         self.talep_listbox.grid(row=9, column=0, columnspan=6, padx=10, pady=10)
         self.excel_aktar_button = ttk.Button(self.pencere, text="İstekleri Excel'e Aktar", command=self.talep_excel_aktar, style='TButton')
